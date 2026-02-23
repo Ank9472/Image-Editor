@@ -26,54 +26,55 @@
                 <p>No image selected</p>
 
             </div>
+            <canvas id="editor-canvas"></canvas>
         </div>
     </div>
-    <div class="right">
+    <div class="right filter-panel">
         <div class="top">
             <h2>Filters</h2>
         </div>
-        <div class="bottom">
-            <div class="filter" id="grayscale">
-                <label for="grayscale-range">Grayscale</label>
-                <input type="range" id="grayscale-range" min="0" max="100" value="0">
+        <div class="bottom slider-list">
+            <div class="filter slider-row" id="grayscale">
+                <label class="slider-label" for="grayscale-range">Grayscale</label>
+                <input class="slider-track" type="range" id="grayscale-range" min="0" max="100" value="0">
             </div>
-            <div class="filter" id="sepia">
-                <label for="sepia-range">Sepia</label>
-                <input type="range" id="sepia-range" min="0" max="100" value="0">
+            <div class="filter slider-row" id="sepia">
+                <label class="slider-label" for="sepia-range">Sepia</label>
+                <input class="slider-track" type="range" id="sepia-range" min="0" max="100" value="0">
             </div>
-            <div class="filter" id="invert">
-                <label for="invert-range">Invert</label>
-                <input type="range" id="invert-range" min="0" max="100" value="0">
+            <div class="filter slider-row" id="invert">
+                <label class="slider-label" for="invert-range">Invert</label>
+                <input class="slider-track" type="range" id="invert-range" min="0" max="100" value="0">
             </div>
-            <div class="filter" id="brightness">
-                <label for="brightness-range">Brightness</label>
-                <input type="range" id="brightness-range" min="-100" max="100" value="0">
+            <div class="filter slider-row" id="brightness">
+                <label class="slider-label" for="brightness-range">Brightness</label>
+                <input class="slider-track" type="range" id="brightness-range" min="-100" max="100" value="0">
             </div>
-            <div class="filter" id="contrast">
-                <label for="contrast-range">Contrast</label>
-                <input type="range" id="contrast-range" min="-100" max="100" value="0">
+            <div class="filter slider-row" id="contrast">
+                <label class="slider-label" for="contrast-range">Contrast</label>
+                <input class="slider-track" type="range" id="contrast-range" min="-100" max="100" value="0">
             </div>
-            <div class="filter" id="exposure">
-                <label for="exposure-range">Exposure</label>
-                <input type="range" id="exposure-range" min="-100" max="100" value="0">
+            <div class="filter slider-row" id="exposure">
+                <label class="slider-label" for="exposure-range">Exposure</label>
+                <input class="slider-track" type="range" id="exposure-range" min="-100" max="100" value="0">
             </div>
-            <div class="filter" id="saturation">
-                <label for="saturation-range">Saturation</label>
-                <input type="range" id="saturation-range" min="-100" max="100" value="0">
+            <div class="filter slider-row" id="saturation">
+                <label class="slider-label" for="saturation-range">Saturation</label>
+                <input class="slider-track" type="range" id="saturation-range" min="-100" max="100" value="0">
             </div>
-            <div class="filter" id="hue-rotate">
-                <label for="hue-range">Hue Rotate</label>
-                <input type="range" id="hue-range" min="0" max="360" value="0">
+            <div class="filter slider-row" id="hue-rotate">
+                <label class="slider-label" for="hue-range">Hue Rotate</label>
+                <input class="slider-track" type="range" id="hue-range" min="0" max="360" value="0">
             </div>
-            <div class="filter" id="blur">
-                <label for="blur-range">Blur</label>
-                <input type="range" id="blur-range" min="0" max="20" value="0">
+            <div class="filter slider-row" id="blur">
+                <label class="slider-label" for="blur-range">Blur</label>
+                <input class="slider-track" type="range" id="blur-range" min="0" max="20" value="0">
             </div>
-            <div class="filter" id="opacity">
-                <label for="opacity-range">Opacity</label>
-                <input type="range" id="opacity-range" min="0" max="100" value="100">
+            <div class="filter slider-row" id="opacity">
+                <label class="slider-label" for="opacity-range">Opacity</label>
+                <input class="slider-track" type="range" id="opacity-range" min="0" max="100" value="100">
             </div>
-            <div class="preset-filters">
+            <div class="preset-filters preset-grid">
                 <button class="preset-btn" data-preset="original">Original</button>
                 <button class="preset-btn" data-preset="vivid">Vivid</button>
                 <button class="preset-btn" data-preset="cold">Cold</button>
@@ -83,5 +84,9 @@
             </div>
         </div>
     </div>
+    <script src="filter-ui.js"></script>
+    <script src="filter-core.js"></script>
+    <script src="canvas-actions.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
