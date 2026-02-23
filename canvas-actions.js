@@ -58,7 +58,15 @@ function bindFilterEvents() {
     resetButton.addEventListener('click', () => {
       resetAllSliders();
       setActivePreset('original');
-      renderCanvasWithFilters();
+      const { canvas, originalImage } = canvasState;
+
+      if (canvas) {
+        canvas.style.filter = buildCanvasFilter(presetValues.original);
+      }
+
+      if (originalImage) {
+        renderCanvasWithFilters();
+      }
     });
   }
 
