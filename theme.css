@@ -2,6 +2,7 @@
     --bg-primar-color:rgb(17,17,17)
     --bg-secondary-color:rgb(34,34,34);
     --bg-active-color:(233,233,233);
+    --bg-danger-color:rgb(200, 50, 50);
 
     /* text color */
     --text-primary-color:rgb(235, 237, 234);
